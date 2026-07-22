@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: shop-management-db
+    environment:
+      POSTGRES_USER: managementuser
+      POSTGRES_PASSWORD: management1234
+      POSTGRES_DB: shop_management
+    ports:
+      - "5433:5432"
+    volumes:
+      - shop_management_db:/var/lib/postgresql/data
+
+volumes:
+  shop_management_db:
