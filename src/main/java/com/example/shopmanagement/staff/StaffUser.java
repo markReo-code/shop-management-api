@@ -42,6 +42,22 @@ public class StaffUser {
 
     }
 
+    public StaffUser(
+        String name,
+        String email,
+        String shopName,
+        StaffRole role,
+        boolean active,
+        LocalDateTime createdAt
+    ) {
+        this.name = name;
+        this.email = email;
+        this.shopName = shopName;
+        this.role = role;
+        this.active = active;
+        this.createdAt = createdAt;
+    }
+
     public Long getId() {
         return id;
     }
